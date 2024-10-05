@@ -1,4 +1,4 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,10 +18,7 @@
 
 .form-container{
   width: 70%;
-  border: 1px solid rgb(219, 219, 219);
-  border-radius: 10px;
-  padding: 10px;
-}
+  border: 1px solid r'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 .form-header{
    display: flex;
@@ -77,15 +74,7 @@ form .input-group{
   
 }
 
-.input-group>i{
-  font-size: 17px;
-  color: blue;
-}
-
-form .input-group input{
-  border: none;
-  outline: none;
-  padding: 5px;
+.input-group>i{'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
 }
 
@@ -123,4 +112,90 @@ form .input-group input{
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  "Verdana", sans-serif;
+  background-color: #222222;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.fields{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 20px;
+
+}
+
+.fields .location{
+  padding: 20px;
+  border: 1px solid #5b5d60;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fields .location input{
+  outline: none;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-inline: 20px;
+}
+
+.fields .location i{
+  position: absolute;
+  left: 15px;
+  font-size: 1.3rem;
+  color: #5b5d60;
+}
+
+button{
+  z-index: 2;
+  padding:15px;
+  border: 1px solid #5b5d60;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  background-color: #222222;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+button::before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #222222;
+  top: -10px;
+
+}
+button::after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #222222;
+  bottom: -10px;
+
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Selector</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       body {
+        background: #212121;
+        color: #dedede;
+        }
+
+        .wrap {
+        display: grid;
+        grid-gap: 0.5em;
+        place-content: center;
+        margin: 1em auto;
+        }
+
+        input,
+        button {
+        background: none;
+        color: inherit;
+        font: clamp(1em, 8vw, 2.5em) sans-serif;
+        outline: none;
+        }
+
+        input {
+        --i: 0;
+        --s: calc(2 * var(--i) - 1);
+        --x: calc((1 - var(--i)) * 100% - var(--s) * 0.2 *0.5em);
+        box-sizing: border-box;
+        grid-area: 1/calc(1 + var(--i));
+        border: solid 2px #646569;
+        padding: 0.5em 1em;
+        width: 100%;
+        background: radial-gradient(0.625em at var(--x), #0000 calc(100% + -1px), #646569 100% calc(100% + 2px + -1px), #0000 calc(100% + 2px)) border-box;
+        mask: radial-gradient(0.625em at var(--x), #0000 calc(100% + -1px), red) border-box;
+        border-radius: 0.25em;
+
+        }
+        input:nth-child(2) {
+        --i: 1;
+        }
+
+        button {
+        grid-area: 1/1/span 1/span 2;
+        place-self: center;
+        border: 0;
+        border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap" >
+        <input type="text" value="Algiers" >
+        <input type="text" value="Paris" >
+        <button>⇄</button>
+    </div>
+</body>
+</html>
